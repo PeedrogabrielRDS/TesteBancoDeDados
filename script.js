@@ -10,14 +10,14 @@ form.addEventListener("submit", async (e) => {
     feedback: form.feedback.value.trim()
   };
 
-  const resposta = await fetch("http://localhost:3003/api", {
+  const resposta = await fetch("https://testebancodedados.onrender.com/api", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(dados)
   });
 
   if (resposta.ok) {
-    window.location.href = "http://localhost:3003/api";
+    window.location.href = "https://testebancodedados.onrender.com/api";
   } else {
     alert("Erro ao enviar os dados.");
   }
